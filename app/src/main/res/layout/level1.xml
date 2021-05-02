@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".FirstLevel">
+
+
+    <TextView
+        android:id="@+id/txtlevel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:text="Level 1"
+        android:textSize="30dp"
+        android:background="@color/teal_700"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/txtAnimalName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="speak_name"
+        android:text="asdasda"
+        android:textSize="30dp"
+        android:background="@color/teal_200"
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/purple_200"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/txtlevel1"/>
+    <TextView
+        android:id="@+id/kronometre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtAnimalName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/higherscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Higher Score"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/txtAnimalName"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:tag=""
+        android:id="@+id/image1"
+        android:layout_width="160dp"
+        android:layout_height="240dp"
+        android:onClick="answer_controller"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="@id/txtAnimalName"
+        app:layout_constraintBottom_toBottomOf="@id/txtPoint"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+    <ImageView
+        android:tag=""
+        android:id="@+id/image2"
+        android:layout_width="160dp"
+        android:layout_height="240dp"
+        android:onClick="answer_controller"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="@id/txtAnimalName"
+        app:layout_constraintBottom_toBottomOf="@id/txtPoint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image1"
+        />
+    <TextView
+        android:id="@+id/txtPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Points: 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
